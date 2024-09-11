@@ -40,10 +40,15 @@
 
 /* Estilos Gerais */
 body {
+    
+    background-image: url('img/body.png');
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: auto;
+    background-attachment: fixed; /* Isso garante que o background não se mova com a rolagem */
     font-family: 'MADEOkineSans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d8cdc3; /* Cor de fundo similar à da imagem */
     font-size: 1rem; /* Definindo o tamanho base da fonte para 16px */
     line-height: 1.6; /* Melhorando a legibilidade */
 }
@@ -57,7 +62,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #f8f9fa;
+    background-color: #d6d4c3;
     padding: 0rem 0rem;
     position: center;
     width: 100%;
@@ -90,18 +95,24 @@ header nav .menu {
 header nav .menu a {
     margin: 0 0.5rem;
     text-decoration: none;
-    color: #333;
+    color: #587382;
+}
+
+header nav .menu a:hover {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Botão de Agendar */
 .btn-agendar {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #bcd1d9;
+    color: #6f6658;
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
-    margin-left: 1rem; /* Espaçamento para afastar o botão do menu */
+    margin-left: 1rem;
     height: auto;
+    border-radius: 1rem;
 }
 
 /* Ajuste para não cobrir o header */
@@ -118,7 +129,7 @@ header .btn-agendar {
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
-    color: #fff;
+    color: #575045;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -144,12 +155,66 @@ h2 {
     margin-bottom: 2.5rem; /* Substituindo 40px */
 }
 
-.about, .services, .testimonials {
+/* About Section */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border: 0.5rem solid #6f6658; /* External frame */
+    border-radius: 15px;
+    background-color: transparent; /* Transparent background */
+}
+
+/* Text box frame */
+.text-box {
+    border: 0.4rem solid #6f6658; /* Internal frame for the text */
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #d6d4c3;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Inner text styling */
+.text-box-inner {
+    padding: 15px;
+    color: #587382; /* Text color */
+}
+
+/* Image frame */
+.photo-frame {
+    max-width: 40%;
+    border: 0.4rem solid #6f6658; /* Image frame */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d6d4c3;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-left: 20px;
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack vertically on mobile */
+    }
+
+    .text-box, .photo-frame {
+        max-width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .photo-frame {
+        margin-left: 0; /* Remove margin on mobile */
+    }
+}
+
+
+.services, .testimonials {
     background-color: #f4f4f4;
     margin: 1.25rem 0; /* Substituindo 20px */
 }
 
-.about p, .services p, .testimonials p {
+.services p, .testimonials p {
     max-width: 50rem; /* Substituindo 800px */
     margin: 0 auto 1.25rem; /* Substituindo 20px */
     text-align: center;
@@ -193,21 +258,27 @@ h2 {
 .footer-links a {
     margin: 0 0.5rem;
     text-decoration: none;
-    color: #fff;
+    color: #d6d4c3;
     display: inline-block;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Estilo geral do rodapé */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #575045;
+    color: #d6d4c3;
     text-align: center;
     padding: 0.2rem 0;
 }
 
 footer p {
     margin-top: 0.5rem;
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
+    color: #d6d4c3; 
 }
 
 /* Estilo geral de imagens para github pages*/
