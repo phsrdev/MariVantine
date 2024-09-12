@@ -269,20 +269,79 @@ h2 {
     }
 }
 
-.testimonials {
-    background-color: #f4f4f4;
-    margin: 1.25rem 0; /* Substituindo 20px */
+/* Carrossel de depoimentos */
+.testimonial-carousel {
+    background-color: transparent;
+    padding: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-.services p, .testimonials p {
-    max-width: 50rem; /* Substituindo 800px */
-    margin: 0 auto 1.25rem; /* Substituindo 20px */
+.testimonial-h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #575045;
+}
+
+.testimonials p {
+    color: #587382;
+}
+
+.testimonial-item {
+    flex: 1 0 calc(100% - 1rem); /* Garante que o item ocupe o espaço total menos 1rem para o espaçamento */
+    transition: transform 0.5s ease-in-out;
+    padding: 1rem;
     text-align: center;
+    background-color: #d6d4c3;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 1rem; /* Adiciona o espaçamento entre os itens */
 }
 
 .instagram-media {
-    margin: 0 auto; /* Centraliza o vídeo horizontalmente */
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #575045;
+    color: #d6d4c3;
+    font-weight: bold;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-prev {
+    left: 1rem;
+}
+
+.carousel-next {
+    right: 1rem;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: #6f6658;
+}
+
+/* Wrapper do carrossel */
+.testimonial-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde os depoimentos que estão fora da tela */
+}
+
+.testimonial-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 /* Estilos da seção Final */
