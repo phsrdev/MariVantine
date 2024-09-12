@@ -41,7 +41,7 @@
 /* Estilos Gerais */
 body {
     
-    background-image: url('img/body.png');
+    background-image: url('img/body2.png');
     background-repeat: repeat;
     background-position: top left;
     background-size: auto;
@@ -105,12 +105,10 @@ header nav .menu a:hover {
 
 /* Botão de Agendar */
 .btn-agendar {
-    background-color: #bcd1d9;
+    background-color: transparent;
     color: #6f6658;
-    padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
-    margin-left: 1rem;
     height: auto;
     border-radius: 1rem;
 }
@@ -208,8 +206,70 @@ h2 {
     }
 }
 
+/* Estilo geral da seção de serviços */
+.services {
+    text-align: center;
+    padding: 2rem 1rem;
+}
 
-.services, .testimonials {
+.services h2 {
+    font-size: 2.5rem;
+    color: #575045;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Container de serviços */
+.services-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #d6d4c3; /* Fundo bege */
+    border: 0.3rem solid #575045; /* Borda marrom */
+    border-radius: 1rem; /* Borda arredondada */
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-box img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.service-box h3 {
+    font-size: 2rem;
+    color: #587382; /* Azul da paleta */
+    margin-bottom: 0.5rem;
+}
+
+.service-box p {
+    font-size: 1.2rem;
+    color: #575045; /* Marrom da paleta */
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .service-box {
+        max-width: 100%;
+    }
+}
+
+.testimonials {
     background-color: #f4f4f4;
     margin: 1.25rem 0; /* Substituindo 20px */
 }
@@ -225,10 +285,39 @@ h2 {
     display: block;
 }
 
-/* Seção Final (CTA) */
+/* Estilos da seção Final */
 .cta {
     text-align: center;
-    padding: 5rem 1.25rem; /* Substituindo 80px 20px */
+    padding: 2rem;
+}
+
+.cta h2 {
+    color: #575045; /* Marrom */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.cta p {
+    color: #575045; /* Marrom */
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.cta-btn {
+    background-color: #575045;
+    color: #d6d4c3;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #6f6658;
+    color: #fff;
 }
 
 /* Estilo para a logo do footer */
