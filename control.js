@@ -1,15 +1,13 @@
 // Seleciona os elementos necessários
 const carousel = document.querySelector('.testimonial-carousel');
-const items = document.querySelectorAll('.testimonial-item');
 const prevButton = document.querySelector('.carousel-prev');
 const nextButton = document.querySelector('.carousel-next');
 let currentIndex = 0;
-const totalItems = items.length;
+const totalItems = document.querySelectorAll('.testimonial-item').length;
 
-// Atualiza a posição do carrossel
+// Função para atualizar a posição do carrossel
 function updateCarousel() {
-    const translateXValue = -currentIndex * 100;
-    carousel.style.transform = `translateX(${translateXValue}%)`;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
 // Botão "Anterior"
@@ -23,3 +21,6 @@ nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
     updateCarousel();
 });
+
+// Inicia o carrossel com o primeiro item visível
+updateCarousel();
